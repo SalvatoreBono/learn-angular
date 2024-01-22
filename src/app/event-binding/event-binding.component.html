@@ -1,0 +1,15 @@
+<h4>Event Binding</h4>
+<div class="pb-2">Example 1</div>
+<button (click)="onClick()" class="btn btn-danger">
+  Click and view on console
+</button>
+<div class="mb-3 pt-2 col-8">
+  <label for="formGroupExampleInput" class="form-label">Example 2</label>
+  <input
+    type="text"
+    (input)="onKeyPress($event)"
+    class="form-control"
+    id="formGroupExampleInput"
+    placeholder="Write and view on console"
+  />
+</div>
