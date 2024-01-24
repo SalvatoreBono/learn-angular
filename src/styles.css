@@ -2,5 +2,30 @@
 @import "bootstrap";
 
 body {
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(14, 14, 16);
+    overflow: hidden;
+}
+
+* {
+    scrollbar-width: 9px;
+}
+
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(14, 14, 16);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #4a4a4c;
+    border-radius: 10px;
+
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(222, 0, 45, 0.25);
+    border: rgb(222, 0, 45);
 }

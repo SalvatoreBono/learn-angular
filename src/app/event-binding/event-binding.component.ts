@@ -7,11 +7,14 @@ import { Component } from '@angular/core';
 })
 export class EventBindingComponent {
   constructor() {}
-
+  text = '';
+  click = '';
   onClick() {
-    console.log('You clicked');
+    console.log('You clicked!');
+    this.click = 'You clicked!';
   }
   onKeyPress(event: any) {
     console.log(event.target.value);
+    this.text = event.target.value;
   }
 }

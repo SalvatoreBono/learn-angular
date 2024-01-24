@@ -1,1 +1,21 @@
 <h4>Two-Way Binding</h4>
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Example</label>
+  <div class="row g-3">
+    <div class="col-3">
+      <input
+        type="text"
+        [(ngModel)]="binding"
+        class="form-control"
+        placeholder="Write"
+        aria-label="Write"
+      />
+    </div>
+    <div class="col-6">
+      <button class="btn btn-danger" (click)="onClick()">
+        Click to change
+      </button>
+    </div>
+  </div>
+  <div class="pt-2">{{ binding }}</div>
+</div>

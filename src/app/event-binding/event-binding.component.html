@@ -1,15 +1,20 @@
 <h4>Event Binding</h4>
 <div class="pb-2">Example 1</div>
-<button (click)="onClick()" class="btn btn-danger">
-  Click and view on console
-</button>
-<div class="mb-3 pt-2 col-8">
+<div class="d-flex align-items-center">
+  <button (click)="onClick()" class="btn btn-danger">Click</button>
+  <div class="ps-3">{{ click }}</div>
+</div>
+
+<div class="mb-3 pt-2 row align-items-center">
   <label for="formGroupExampleInput" class="form-label">Example 2</label>
-  <input
-    type="text"
-    (input)="onKeyPress($event)"
-    class="form-control"
-    id="formGroupExampleInput"
-    placeholder="Write and view on console"
-  />
+  <div class="col-3">
+    <input
+      type="text"
+      (input)="onKeyPress($event)"
+      class="form-control"
+      id="formGroupExampleInput"
+      placeholder="Write"
+    />
+  </div>
+  <div class="ps-2 col-6">{{ text }}</div>
 </div>

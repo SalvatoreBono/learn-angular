@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentLifecycleComponent } from './component-lifecycle/component-lifecycle.component';
-import { MainComponent } from './main/main.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './main/main.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
-import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 
 @NgModule({
@@ -20,13 +21,10 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
     PropertyBindingComponent,
     StringInterpolationComponent,
     EventBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
