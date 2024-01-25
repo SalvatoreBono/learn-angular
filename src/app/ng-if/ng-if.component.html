@@ -1,0 +1,11 @@
+<h4>NGIF</h4>
+<div class="pb-2">Example</div>
+<button (click)="clickForTrue()" class="btn btn-success me-2">True</button>
+<button (click)="clickForFalse()" class="btn btn-danger">False</button>
+<div *ngIf="isVisible; then divTrue; else divFalse"></div>
+<ng-template #divTrue>
+  <div class="text-success fw-bold pt-2">True</div></ng-template
+>
+<ng-template #divFalse
+  ><div class="text-danger fw-bold pt-2">False</div>
+</ng-template>

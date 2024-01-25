@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
     StringInterpolationComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
+    NgIfComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
