@@ -13,6 +13,8 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     TwoWayBindingComponent,
     NgIfComponent,
     NgForComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

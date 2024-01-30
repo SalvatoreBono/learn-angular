@@ -1,0 +1,7 @@
+<div class="d-flex align-items-center">
+  <div class="pe-2" *ngFor="let infoLink of infoLinks">
+    <a [href]="infoLink.url" target="_blank">
+      <img [src]="infoLink.logo" alt="" />
+    </a>
+  </div>
+</div>
