@@ -15,6 +15,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ParentReceivedComponent } from './parent-received/parent-received.component';
+import { ChildSendComponent } from './child-send/child-send.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { ChildComponent } from './child/child.component';
     NgForComponent,
     ParentComponent,
     ChildComponent,
+    ParentReceivedComponent,
+    ChildSendComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

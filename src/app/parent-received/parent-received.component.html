@@ -1,0 +1,27 @@
+<h4 class="pt-2">
+  <i
+    class="fa-solid fa-caret-right fa-xs pe-1"
+    style="color: rgb(222, 0, 45)"
+  ></i
+  >Child to Parent
+</h4>
+<div class="pb-2">
+  <span class="fw-bold">Example of Child to Parent:</span> <br />
+  My <span class="fw-bold" style="color: rgb(222, 0, 45)">Experience</span>:
+  <div class="pt-2">
+    <app-child-send
+      (sendData)="receiveDataFromTheChild($event)"
+    ></app-child-send>
+    <div class="pt-2">
+      <div class="fw-bold">{{ myExperience.title }}</div>
+      <div *ngIf="isTrue" class="d-flex align-items-center pt-1">
+        <img [src]="myExperience.logo_company" alt="" />
+        <div class="ps-1">
+          {{ myExperience.company_name }}
+          | {{ myExperience.year }}
+        </div>
+      </div>
+      <p>{{ myExperience.description }}</p>
+    </div>
+  </div>
+</div>
