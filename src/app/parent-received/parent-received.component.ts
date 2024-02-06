@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentReceivedComponent implements OnInit {
   isTrue = false;
-  myExperience: any;
+  myExperience = {
+    title: '',
+    company_name: '',
+    logo_company: '',
+    year: null,
+    description: '',
+  };
   receiveDataFromTheChild(value: any) {
     this.isTrue = true;
     this.myExperience = value;

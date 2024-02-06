@@ -17,6 +17,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ParentReceivedComponent } from './parent-received/parent-received.component';
 import { ChildSendComponent } from './child-send/child-send.component';
+import { VariableTemplateComponent } from './variable-template/variable-template.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ChildSendComponent } from './child-send/child-send.component';
     ChildComponent,
     ParentReceivedComponent,
     ChildSendComponent,
+    VariableTemplateComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

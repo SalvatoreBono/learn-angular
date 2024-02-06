@@ -1,0 +1,34 @@
+<h4 class="pt-2">
+  <i
+    class="fa-solid fa-caret-right fa-xs pe-1"
+    style="color: rgb(222, 0, 45)"
+  ></i
+  >Variable Template
+</h4>
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Example</label>
+  <div class="row g-3">
+    <div class="col-3">
+      <input
+        #inputValue
+        value=""
+        type="text"
+        class="form-control"
+        placeholder="Write your name"
+        aria-label="Write"
+      />
+    </div>
+    <div class="col-6">
+      <button (click)="onClick()" class="btn btn-danger">Confirm</button>
+    </div>
+  </div>
+
+  <div *ngIf="divTrue" class="text-success">
+    Hi {{ name }} i will contact you as soon as possible
+    <span class="text-danger">(don't worry it's fake)</span>
+  </div>
+
+  <div *ngIf="divFalse" class="text-danger">
+    You didn't write anything, come on try
+  </div>
+</div>

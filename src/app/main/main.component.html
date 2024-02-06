@@ -8,16 +8,19 @@
         <app-two-way-binding></app-two-way-binding>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-1 row-cols-xl-2 pt-2">
+    <div class="row row-cols-1 row-cols-xl-2 pt-2">
       <app-property-binding class="col"></app-property-binding>
       <div class="col">
         <app-ng-if></app-ng-if>
         <app-ng-for></app-ng-for>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-1 row-cols-xl-2 pt-2">
-      <app-parent class="col"></app-parent>
-      <app-parent-received></app-parent-received>
+    <div class="row row-cols-1 row-cols-xl-2 pt-2">
+      <div class="col">
+        <app-parent></app-parent>
+        <app-variable-template></app-variable-template>
+      </div>
+      <app-parent-received class="col"></app-parent-received>
     </div>
   </div>
 </main>
