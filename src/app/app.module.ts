@@ -18,6 +18,8 @@ import { ChildComponent } from './child/child.component';
 import { ParentReceivedComponent } from './parent-received/parent-received.component';
 import { ChildSendComponent } from './child-send/child-send.component';
 import { VariableTemplateComponent } from './variable-template/variable-template.component';
+import { EnterLeaveDirective } from './enter-leave.directive';
+import { DirectiveComponent } from './directive/directive.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { VariableTemplateComponent } from './variable-template/variable-template
     ParentReceivedComponent,
     ChildSendComponent,
     VariableTemplateComponent,
+    EnterLeaveDirective,
+    DirectiveComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

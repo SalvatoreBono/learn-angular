@@ -1,0 +1,22 @@
+nav {
+    background-color: rgb(24, 24, 27);
+}
+
+.checked-purple:checked {
+    background-color: purple;
+    border-color: purple;
+}
+
+.checked-red:checked {
+    background-color: red;
+    border-color: red;
+}
+
+.focus-red:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.25);
+}
+
+.focus-purple:focus {
+    box-shadow: 0 0 0 0.25rem rgba(128, 0, 128, 0.25);
+
+}
