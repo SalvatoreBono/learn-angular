@@ -5,3 +5,9 @@
     z-index: 1;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0px 2px rgba(0, 0, 0, .9);
 }
+
+.btn-dark {
+    --bs-btn-bg: "";
+    --bs-btn-border-color: "";
+
+}

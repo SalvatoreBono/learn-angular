@@ -1,0 +1,24 @@
+.menu {
+    overflow: auto;
+    height: 100vh;
+    width: 240px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-dark {
+    --bs-btn-bg: "";
+    --bs-btn-border-color: "";
+}
+
+.btn {
+    width: 100%;
+}
+
+
+.menu.open {
+    width: 200px;
+}
+
+.menu.closed {
+    width: 0;
+}
