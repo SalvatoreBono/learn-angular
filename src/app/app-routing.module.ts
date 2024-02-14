@@ -9,7 +9,7 @@ const routes: Routes = [
     component: MainComponent,
   },
   {
-    path: 'info',
+    path: 'component-lifecycle',
     component: InfoComponent,
   },
 ];

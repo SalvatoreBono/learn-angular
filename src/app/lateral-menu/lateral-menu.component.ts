@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lateral-menu.component.css'],
 })
 export class LateralMenuComponent implements OnInit {
+  sideBarOpen = true;
   constructor() {}
+  onClick() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
   ngOnInit(): void {}
 }
