@@ -1,0 +1,84 @@
+<div class="text-white pb-3 container">
+  <div class="fw-bold">
+    <span style="color: rgb(222, 0, 45)">What is: <br /></span> Component
+    Lifecycle
+  </div>
+  <p>
+    A component goes through a defined series of phases from creation to
+    destruction, known as the <span class="fw-bold">component lifecycle:</span>
+  </p>
+  <ol>
+    <li class="fw-bold">Creation:</li>
+    <ul>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)">ngOnChanges:</span>
+        Invoked when input properties change after initialization. Useful for
+        reacting to external data changes.
+      </li>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)">ngOnInit:</span>
+        Called after the component has been initialized and its view has been
+        created. Perfect for fetching data, subscribing to events, and setting
+        up initial state.
+      </li>
+    </ul>
+    <li class="fw-bold pt-3">Change Detection:</li>
+    <ul>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)">ngDoCheck:</span>
+        Triggered after every change detection cycle. Often used for debugging
+        or performance optimization.
+      </li>
+    </ul>
+    <li class="fw-bold pt-3">View Updates:</li>
+    <ul>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)"
+          >ngAfterContentChecked:</span
+        >
+        Called after content children (components projected through
+        <span class="fw-bold" style="color: rgb(222, 0, 45)">ng-content</span> )
+        have been checked.
+      </li>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)"
+          >ngAfterViewInit:</span
+        >
+        Invoked after the component's view (including child components) has been
+        fully initialized. Ideal for accessing or manipulating DOM elements
+        directly.
+      </li>
+    </ul>
+    <li class="fw-bold pt-3">Changes and Destruction:</li>
+    <ul>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)">ngOnChanges:</span>
+        Called again if input properties change again after initialization.
+      </li>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)">ngOnDestroy:</span>
+        Triggered just before the component is destroyed. Used for cleaning up
+        resources like subscriptions, timers, and event listeners.
+      </li>
+    </ul>
+    <li class="fw-bold pt-3">Additional hooks:</li>
+    <ul>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)">
+          constructor:</span
+        >
+        Typically used for injecting dependencies and performing basic setup.
+      </li>
+      <li>
+        <span class="fw-bold" style="color: rgb(222, 0, 45)"
+          >ngAfterViewChecked:</span
+        >
+        Similar to
+        <span class="fw-bold" style="color: rgb(222, 0, 45)"
+          >ngAfterViewInit</span
+        >
+        , but occurs after change detection has completed.
+      </li>
+    </ul>
+  </ol>
+</div>

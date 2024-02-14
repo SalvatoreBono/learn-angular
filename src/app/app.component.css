@@ -3,3 +3,23 @@
     height: calc(100vh - 50px);
     overflow: auto;
 }
+
+.flag {
+    position: absolute;
+    rotate: 90deg;
+    bottom: 50px;
+    left: -55px;
+}
+
+.flag-img {
+    width: 60px;
+    transition: 0.5s;
+}
+
+.flag-img:hover {
+    transform: translateY(-10px);
+}
+
+img {
+    width: 100%;
+}

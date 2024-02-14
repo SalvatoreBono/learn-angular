@@ -9,41 +9,8 @@
     </div>
   </div>
   <div *ngIf="sideBarOpen">
-    <a routerLink="/">
-      <button type="button" class="btn btn-dark">Home</button>
-    </a>
-    <a routerLink="component-lifecycle">
-      <button type="button" class="btn btn-dark">Component Lifecycle</button>
-    </a>
-    <a routerLink="string-interpolation">
-      <button type="button" class="btn btn-dark">String Interpolation</button>
-    </a>
-    <a routerLink="property-binding">
-      <button type="button" class="btn btn-dark">Property Binding</button>
-    </a>
-    <a routerLink="event-binding">
-      <button type="button" class="btn btn-dark">Event Binding</button>
-    </a>
-    <a routerLink="two-way-binding">
-      <button type="button" class="btn btn-dark">Two-Way Binding</button>
-    </a>
-    <a routerLink="ngif">
-      <button type="button" class="btn btn-dark">NGIF</button>
-    </a>
-    <a routerLink="ngfor">
-      <button type="button" class="btn btn-dark">NGFOR</button>
-    </a>
-    <a routerLink="parent-to-child">
-      <button type="button" class="btn btn-dark">Parent to Child</button>
-    </a>
-    <a routerLink="child-to-parent">
-      <button type="button" class="btn btn-dark">Child to Parent</button>
-    </a>
-    <a routerLink="directive">
-      <button type="button" class="btn btn-dark">Directive</button>
-    </a>
-    <a routerLink="service">
-      <button type="button" class="btn btn-dark">Service</button>
+    <a *ngFor="let route of routes" [routerLink]="route.path">
+      <button type="button" class="btn btn-dark">{{ route.title }}</button>
     </a>
   </div>
   <div *ngIf="!sideBarOpen">

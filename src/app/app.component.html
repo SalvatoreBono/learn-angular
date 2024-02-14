@@ -1,7 +1,15 @@
 <app-header></app-header>
 <div class="d-flex">
   <app-lateral-menu></app-lateral-menu>
-  <div class="flex-grow-1 main">
+  <div class="flex-grow-1 main position-relative">
     <router-outlet></router-outlet>
+    <div class="flag">
+      <button class="btn flag-img">
+        <img src="assets/ita.svg.png" alt="" />
+      </button>
+      <button class="btn flag-img">
+        <img src="assets/eng.svg.png" alt="" />
+      </button>
+    </div>
   </div>
 </div>
