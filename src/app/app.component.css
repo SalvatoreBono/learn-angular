@@ -1,13 +1,7 @@
-.main {
-    padding-top: 0.5rem;
-    height: calc(100vh - 50px);
-    overflow: auto;
-}
-
 .flag {
     position: absolute;
     rotate: 90deg;
-    bottom: 50px;
+    bottom: 110px;
     left: -55px;
 }
 
@@ -17,7 +11,7 @@
 }
 
 .flag-img:hover {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
 }
 
 img {
