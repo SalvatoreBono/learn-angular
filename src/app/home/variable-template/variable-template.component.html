@@ -6,7 +6,9 @@
   >Variable Template
 </h4>
 <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example</label>
+  <label for="formGroupExampleInput" class="form-label">{{
+    currentLanguage.getLanguage() === "en" ? "Example" : "Esempio"
+  }}</label>
   <div class="row g-3">
     <div class="col-3">
       <input
@@ -14,21 +16,37 @@
         value=""
         type="text"
         class="form-control"
-        placeholder="Write your name"
+        placeholder="{{
+          currentLanguage.getLanguage() == 'en'
+            ? 'Write your name'
+            : 'Scrivi il tuo nome'
+        }} "
         aria-label="Write"
       />
     </div>
     <div class="col-6">
-      <button (click)="onClick()" class="btn btn-danger">Confirm</button>
+      <button (click)="onClick()" class="btn btn-danger">
+        {{ currentLanguage.getLanguage() === "en" ? "Confirm" : "Conferma" }}
+      </button>
     </div>
   </div>
 
   <div *ngIf="divTrue" class="text-success pt-1">
-    Hi {{ name }} i will contact you as soon as possible
-    <span class="text-danger">(don't worry it's fake)</span>
+    <div *ngIf="currentLanguage.getLanguage() === 'en'">
+      Hi {{ name }} i will contact you as soon as possible
+      <span class="text-danger"> (don't worry, it is false)</span>
+    </div>
+    <div *ngIf="currentLanguage.getLanguage() === 'it'">
+      Ciao {{ name }} ti contatterò il prima possibile
+      <span class="text-danger"> (non preoccuparti, è falso)</span>
+    </div>
   </div>
 
   <div *ngIf="divFalse" class="text-danger pt-1">
-    You didn't write anything, come on try
+    {{
+      currentLanguage.getLanguage() === "en"
+        ? " You didn't write anything, come on try"
+        : "Non hai scritto nulla, dai, provaci."
+    }}
   </div>
 </div>

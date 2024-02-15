@@ -5,9 +5,16 @@
   ></i
   >String Interpolation
 </h4>
-<p>
+<p *ngIf="currentLanguage.getLanguage() == 'it'">
+  <span class="fw-bold">Esempio di string interpolation:</span> Ciao, sono
+  <span class="fw-bold" style="color: rgb(222, 0, 45)">{{ my.name }}</span>
+  un {{ my.job }}. Sono entusiasta di condividere con voi i progetti e le
+  competenze che ho affinato nel mio viaggio nel mondo dello sviluppo web.
+  {{ my.goal.it }}.
+</p>
+<p *ngIf="currentLanguage.getLanguage() == 'en'">
   <span class="fw-bold">Example of string interpolation:</span> Hi, I'm
-  <span class="fw-bold" style="color: rgb(222, 0, 45)">{{ My[0].name }}</span>
-  a {{ My[0].job }}. I'm excited to share with you the projects and skills I've
-  been honing on my journey in the world of web development. {{ My[0].goal }}.
+  <span class="fw-bold" style="color: rgb(222, 0, 45)">{{ my.name }}</span>
+  a {{ my.job }}. I'm excited to share with you the projects and skills I've
+  been honing on my journey in the world of web development. {{ my.goal.en }}.
 </p>

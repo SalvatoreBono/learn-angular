@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-parent-received',
@@ -12,13 +13,13 @@ export class ParentReceivedComponent implements OnInit {
     company_name: '',
     logo_company: '',
     year: null,
-    description: '',
+    description: { it: '', en: '' },
   };
   receiveDataFromTheChild(value: any) {
     this.isTrue = true;
     this.myExperience = value;
   }
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
 
   ngOnInit(): void {}
 }

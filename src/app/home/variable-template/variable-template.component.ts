@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-variable-template',
@@ -13,7 +14,7 @@ import {
 })
 export class VariableTemplateComponent implements OnInit, AfterViewInit {
   @ViewChild('inputValue') inputValue!: ElementRef<HTMLInputElement>;
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
   divTrue = false;
   divFalse = false;
   name = '';

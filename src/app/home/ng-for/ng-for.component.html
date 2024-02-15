@@ -6,8 +6,17 @@
   >NGFOR
 </h4>
 <div class="pb-2">
-  <span class="fw-bold">Example of ngFor:</span> <br />
-  My <span class="fw-bold" style="color: rgb(222, 0, 45)">Skills</span>:
+  <span class="fw-bold"
+    >{{
+      currentLanguage.getLanguage() == "en" ? "Example of" : "Esempio di"
+    }}
+    ngFor:</span
+  >
+  <br />
+  {{ currentLanguage.getLanguage() == "en" ? "My " : "Le mie " }}
+  <span class="fw-bold" style="color: rgb(222, 0, 45)">
+    {{ currentLanguage.getLanguage() == "en" ? "Skills" : "Competenze " }}</span
+  >:
 </div>
 <div class="row row-cols-sm-3 row row-cols-md-5 g-4 align-items-center">
   <div *ngFor="let skill of skills" class="col">

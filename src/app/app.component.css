@@ -2,7 +2,7 @@
     position: absolute;
     rotate: 90deg;
     bottom: 110px;
-    left: -55px;
+    left: -57px;
 }
 
 .flag-img {
@@ -11,7 +11,7 @@
 }
 
 .flag-img:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
 }
 
 img {

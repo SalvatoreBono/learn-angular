@@ -6,8 +6,17 @@
   >Child to Parent
 </h4>
 <div class="pb-2">
-  <span class="fw-bold">Example of Child to Parent:</span> <br />
-  My <span class="fw-bold" style="color: rgb(222, 0, 45)">Experience</span>:
+  <span class="fw-bold">
+    {{ currentLanguage.getLanguage() === "en" ? "Example of" : "Esempio di" }}
+    Child to Parent:</span
+  >
+  <br />
+  {{ currentLanguage.getLanguage() === "en" ? "My" : "La mia" }}
+  <span class="fw-bold" style="color: rgb(222, 0, 45)">
+    {{
+      currentLanguage.getLanguage() === "en" ? "Experience " : "Esperienza"
+    }}</span
+  >:
   <div class="pt-2">
     <app-child-send
       (sendData)="receiveDataFromTheChild($event)"
@@ -21,7 +30,13 @@
           | {{ myExperience.year }}
         </div>
       </div>
-      <p>{{ myExperience.description }}</p>
+      <p>
+        {{
+          currentLanguage.getLanguage() === "en"
+            ? myExperience.description.en
+            : myExperience.description.it
+        }}
+      </p>
     </div>
   </div>
 </div>

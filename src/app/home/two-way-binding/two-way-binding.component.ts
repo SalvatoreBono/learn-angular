@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-two-way-binding',
@@ -6,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./two-way-binding.component.css'],
 })
 export class TwoWayBindingComponent implements OnInit {
-  constructor() {}
-  binding = '';
+  constructor(public currentLanguage: TranslateService) {}
+  bindingEn = '';
+  bindingIt = '';
 
   onClick() {
-    this.binding = 'You clicked!';
+    this.bindingEn = 'You clicked!';
+    this.bindingIt = 'Hai cliccato!';
   }
   ngOnInit(): void {}
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 import { FormationService } from '../../formation.service';
 
 @Component({
@@ -7,7 +8,10 @@ import { FormationService } from '../../formation.service';
   styleUrls: ['./service.component.css'],
 })
 export class ServiceComponent implements OnInit {
-  constructor(public myFormation: FormationService) {}
+  constructor(
+    public myFormation: FormationService,
+    public currentLanguage: TranslateService
+  ) {}
 
   ngOnInit(): void {}
 }

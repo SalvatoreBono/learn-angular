@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '../translate.service';
 
 @Component({
   selector: 'app-lateral-menu',
@@ -61,7 +62,7 @@ export class LateralMenuComponent implements OnInit {
     },
   ];
   sideBarOpen = true;
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
   onClick() {
     this.sideBarOpen = !this.sideBarOpen;
   }

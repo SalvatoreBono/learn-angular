@@ -5,11 +5,18 @@
   ></i
   >Directive
 </h4>
-<label for="formGroupExampleInput" class="form-label">Example</label>
+<label for="formGroupExampleInput" class="form-label">{{
+  currentLanguage.getLanguage() === "en" ? "Example" : "Esempio"
+}}</label>
 <div class="mb-3">
   <div class="d-flex">
     <div>
-      <div>Choose <span class="fw-bold">border color</span> at hover</div>
+      <div *ngIf="currentLanguage.getLanguage() === 'en'">
+        Choose <span class="fw-bold">border color</span> at hover
+      </div>
+      <div *ngIf="currentLanguage.getLanguage() === 'it'">
+        Scegliere il <span class="fw-bold">colore del bordo</span>
+      </div>
       <div class="form-check form-check-inline ms-2 pb-1 pt-1">
         <input
           class="form-check-input checked-red focus-red"
@@ -18,7 +25,9 @@
           name="border_color"
           checked
         />
-        <label class="form-check-label" for="inlineRadio2">Red</label>
+        <label class="form-check-label" for="inlineRadio2">{{
+          currentLanguage.getLanguage() == "en" ? "Red" : "Rosso"
+        }}</label>
       </div>
       <div class="form-check form-check-inline">
         <input
@@ -27,7 +36,9 @@
           name="border_color"
           (click)="changeBorderColor('1px solid purple')"
         />
-        <label class="form-check-label" for="inlineRadio1">Purple</label>
+        <label class="form-check-label" for="inlineRadio1">{{
+          currentLanguage.getLanguage() == "en" ? "Purple" : "Viola"
+        }}</label>
       </div>
       <div class="form-check form-check-inline">
         <input
@@ -36,11 +47,18 @@
           (click)="changeBorderColor('1px solid blue')"
           name="border_color"
         />
-        <label class="form-check-label" for="inlineRadio2">Blue</label>
+        <label class="form-check-label" for="inlineRadio2">{{
+          currentLanguage.getLanguage() == "en" ? "Blue" : "Blu"
+        }}</label>
       </div>
     </div>
     <div>
-      <div>Choose <span class="fw-bold">text color </span> at hover</div>
+      <div *ngIf="currentLanguage.getLanguage() === 'en'">
+        Choose <span class="fw-bold">text color</span> at hover
+      </div>
+      <div *ngIf="currentLanguage.getLanguage() === 'it'">
+        Scegliere il <span class="fw-bold">colore del testo</span>
+      </div>
       <div class="form-check form-check-inline ms-2 pb-1 pt-1">
         <input
           class="form-check-input checked-red focus-red"
@@ -49,7 +67,9 @@
           name="color_text"
           checked
         />
-        <label class="form-check-label" for="inlineRadio2">Red</label>
+        <label class="form-check-label" for="inlineRadio2">{{
+          currentLanguage.getLanguage() == "en" ? "Red" : "Rosso"
+        }}</label>
       </div>
       <div class="form-check form-check-inline">
         <input
@@ -58,7 +78,9 @@
           (click)="changeTextColor('purple')"
           name="color_text"
         />
-        <label class="form-check-label" for="inlineRadio1">Purple</label>
+        <label class="form-check-label" for="inlineRadio1">{{
+          currentLanguage.getLanguage() == "en" ? "Purple" : "Viola"
+        }}</label>
       </div>
       <div class="form-check form-check-inline">
         <input
@@ -67,7 +89,9 @@
           (click)="changeTextColor('blue')"
           name="color_text"
         />
-        <label class="form-check-label" for="inlineRadio2">Blue</label>
+        <label class="form-check-label" for="inlineRadio2">{{
+          currentLanguage.getLanguage() == "en" ? "Blue" : "Blu"
+        }}</label>
       </div>
     </div>
   </div>
@@ -101,7 +125,9 @@
               [borderColor]="borderColor"
               [textColor]="textColor"
               href="#"
-              >Contact</a
+              >{{
+                currentLanguage.getLanguage() == "en" ? "Contact" : "Contatti"
+              }}</a
             >
           </li>
         </ul>

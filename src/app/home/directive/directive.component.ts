@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-directive',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectiveComponent implements OnInit {
   borderColor = '';
   textColor = '';
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
 
   changeBorderColor(color: string) {
     this.borderColor = color;

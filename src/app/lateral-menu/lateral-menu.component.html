@@ -1,6 +1,8 @@
 <div class="menu p-2" [ngClass]="{ closed: !sideBarOpen, open: sideBarOpen }">
   <div class="d-flex justify-content-between align-items-center text-white">
-    <div *ngIf="sideBarOpen" class="fw-bold">Chapters</div>
+    <div *ngIf="sideBarOpen" class="fw-bold">
+      {{ currentLanguage.getLanguage() === "en" ? "Chapters" : "Capitoli" }}
+    </div>
     <div>
       <button (click)="onClick()" class="btn btn-dark">
         <img *ngIf="sideBarOpen" src="assets/arrow-left-to-line.svg" alt="" />

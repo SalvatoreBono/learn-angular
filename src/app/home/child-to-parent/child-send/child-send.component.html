@@ -1,3 +1,7 @@
 <button class="btn btn-danger" (click)="clickForSendData()">
-  Click on the button to see what the child sends
+  {{
+    currentLanguage.getLanguage() === "en"
+      ? "Click on the button to see what the child sends"
+      : "Fare clic sul pulsante per vedere cosa invia il child"
+  }}
 </button>

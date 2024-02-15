@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-component-lifecycle',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./component-lifecycle.component.css'],
 })
 export class ComponentLifecycleComponent {
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
 }

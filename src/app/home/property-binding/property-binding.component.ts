@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-property-binding',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-binding.component.css'],
 })
 export class PropertyBindingComponent implements OnInit {
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
   btnIsDisabled = true;
 
   img = 'assets/propertybinding1.jpg';

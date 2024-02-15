@@ -6,22 +6,34 @@
   >Two-Way Binding
 </h4>
 <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example</label>
+  <label for="formGroupExampleInput" class="form-label">{{
+    currentLanguage.getLanguage() === "en" ? "Example" : "Esempio"
+  }}</label>
   <div class="row g-3">
     <div class="col-3">
       <input
         type="text"
-        [(ngModel)]="binding"
+        [(ngModel)]="
+          currentLanguage.getLanguage() === 'en' ? bindingEn : bindingIt
+        "
         class="form-control"
-        placeholder="Write"
+        placeholder="{{
+          currentLanguage.getLanguage() === 'en' ? 'Write' : 'Scrivi'
+        }}"
         aria-label="Write"
       />
     </div>
     <div class="col-6">
       <button class="btn btn-danger" (click)="onClick()">
-        Click to change
+        {{
+          currentLanguage.getLanguage() === "en"
+            ? "Click to change"
+            : "Clicca per cambiare"
+        }}
       </button>
     </div>
   </div>
-  <div class="pt-2">{{ binding }}</div>
+  <div class="pt-2">
+    {{ currentLanguage.getLanguage() === "en" ? bindingEn : bindingIt }}
+  </div>
 </div>

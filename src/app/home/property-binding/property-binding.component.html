@@ -5,9 +5,13 @@
   ></i
   >Property Binding
 </h4>
-<div class="pb-2">Example 1</div>
-<button [disabled]="btnIsDisabled" class="btn btn-danger">Example</button>
+<div class="pb-2">
+  {{ currentLanguage.getLanguage() == "en" ? "Example 1" : "Esempio 1" }}
+</div>
+<button [disabled]="btnIsDisabled" class="btn btn-danger">
+  {{ currentLanguage.getLanguage() == "en" ? "Example" : "Esempio" }}
+</button>
 <div class="pt-2">
-  Example 2
+  {{ currentLanguage.getLanguage() == "en" ? "Example 2" : "Esempio 2" }}
   <img class="pt-2" [src]="img" alt="" />
 </div>

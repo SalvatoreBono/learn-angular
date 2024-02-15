@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-ng-for',
@@ -18,7 +19,7 @@ export class NgForComponent implements OnInit {
     'assets/Laravel.png',
     'assets/Git.png',
   ];
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
 
   ngOnInit(): void {}
 }

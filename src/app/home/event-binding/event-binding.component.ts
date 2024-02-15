@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-event-binding',
@@ -6,12 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./event-binding.component.css'],
 })
 export class EventBindingComponent {
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
   text = '';
-  click = '';
+  clickEn = '';
+  clickIt = '';
   onClick() {
     console.log('You clicked!');
-    this.click = 'You clicked!';
+    this.clickEn = 'You clicked!';
+    this.clickIt = 'Hai cliccato!';
   }
   onKeyPress(event: any) {
     console.log(event.target.value);

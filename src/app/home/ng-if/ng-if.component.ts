@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from 'src/app/translate.service';
 
 @Component({
   selector: 'app-ng-if',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgIfComponent implements OnInit {
   isVisible = true;
-  constructor() {}
+  constructor(public currentLanguage: TranslateService) {}
   clickForTrue() {
     this.isVisible = true;
   }
