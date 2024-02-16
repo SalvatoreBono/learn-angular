@@ -1,9 +1,5 @@
 <h4 class="pt-2">
-  <i
-    class="fa-solid fa-caret-right fa-xs pe-1"
-    style="color: rgb(222, 0, 45)"
-  ></i
-  >NGIF
+  <i class="fa-solid fa-caret-right fa-xs pe-1 angular-color"></i>NGIF
 </h4>
 <div class="pb-2">
   {{ currentLanguage.getLanguage() == "en" ? "Example" : "Esempio" }}
@@ -21,7 +17,7 @@
   </div></ng-template
 >
 <ng-template #divFalse
-  ><div class="text-danger fw-bold pt-2">
+  ><div class="angular-color fw-bold pt-2">
     {{ currentLanguage.getLanguage() == "en" ? "False" : "Falso" }}
   </div>
 </ng-template>

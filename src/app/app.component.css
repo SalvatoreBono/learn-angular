@@ -17,3 +17,9 @@
 img {
     width: 100%;
 }
+
+main {
+    padding-top: 0.5rem;
+    height: calc(100vh - 50px);
+    overflow: auto;
+}

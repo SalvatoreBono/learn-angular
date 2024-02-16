@@ -26,6 +26,9 @@ import { NgifComponent } from './what-is/ngif/ngif.component';
 import { NgforComponent } from './what-is/ngfor/ngfor.component';
 import { ParentToChildComponent } from './what-is/parent-to-child/parent-to-child.component';
 import { ChildToParentComponent } from './what-is/child-to-parent/child-to-parent.component';
+import { ComponentLifecycleDocComponent } from './what-is/component-lifecycle-doc/component-lifecycle-doc.component';
+import { StringInterpolationDocComponent } from './what-is/string-interpolation-doc/string-interpolation-doc.component';
+import { PropertyBindingDocComponent } from './what-is/property-binding-doc/property-binding-doc.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,9 @@ import { ChildToParentComponent } from './what-is/child-to-parent/child-to-paren
     NgforComponent,
     ParentToChildComponent,
     ChildToParentComponent,
+    ComponentLifecycleDocComponent,
+    StringInterpolationDocComponent,
+    PropertyBindingDocComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -13,7 +13,7 @@ export class LateralMenuComponent implements OnInit {
       title: 'Home',
     },
     {
-      path: 'what-is-component-lifecycle',
+      path: 'what-is-component-lifecycle-doc',
       title: 'Component Lifecycle',
     },
     {

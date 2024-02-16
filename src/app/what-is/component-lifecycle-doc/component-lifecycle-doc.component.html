@@ -1,0 +1,150 @@
+<div class="text-white pb-3 pt-2 container">
+  <div class="fw-bold">
+    <span class="angular-color">
+      {{ currentLanguage.getLanguage() == "en" ? "What is:" : "Che cos'è:" }}
+      <br
+    /></span>
+    Component Lifecycle
+  </div>
+  <div *ngIf="currentLanguage.getLanguage() == 'en'">
+    <p class="pt-3">
+      Every component in Angular follows a well-defined lifecycle, consisting of
+      various stages from creation to destruction.
+    </p>
+    <div class="fw-bold">Key Stages:</div>
+    <ol class="pt-3">
+      <li class="fw-bold">Creation:</li>
+      <ul class="pt-3">
+        <li>
+          <span class="fw-bold angular-color">ngOnChanges()</span> (optional):
+          Triggers when input properties change.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngOnInit()</span>: Invoked after
+          the component receives its initial inputs and the content is
+          available. Ideal for fetching data, setting up subscriptions, or
+          performing computations.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngDoCheck()</span> (optional):
+          Executes after every Change Detection cycle, enabling custom change
+          detection logic.
+        </li>
+      </ul>
+      <li class="fw-bold pt-3">Change Detection:</li>
+      <ul class="pt-3">
+        <li>
+          This stage involves detecting changes in data-bound properties and
+          updating the view if necessary.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngAfterContentChecked()</span>
+          (optional): Called after content is checked, useful for tasks like DOM
+          manipulation based on content changes.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngAfterViewInit()</span>
+          (optional): Invoked after the component's view (including children) is
+          initialized, suitable for DOM-related actions.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngAfterViewChecked()</span>
+          (optional): Executes after the view and content are checked, suitable
+          for tasks that rely on both view and content.
+        </li>
+      </ul>
+      <li class="fw-bold pt-3">Changes:</li>
+      <ul class="pt-3">
+        <li>
+          <span class="fw-bold angular-color">ngOnChanges()</span> (optional):
+          Triggers again when input properties change after the initial setup.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngDoCheck()</span> (optional):
+          Runs after every Change Detection cycle, allowing custom logic or
+          optimizations.
+        </li>
+      </ul>
+      <li class="fw-bold pt-3">Destruction:</li>
+      <ul class="pt-3">
+        <li>
+          <span class="fw-bold angular-color">ngOnDestroy()</span>: Called
+          before the component is destroyed, essential for cleaning up resources
+          like subscriptions, timers, or external data connections.
+        </li>
+      </ul>
+    </ol>
+  </div>
+  <div *ngIf="currentLanguage.getLanguage() == 'it'">
+    <p class="pt-3">
+      Ogni componente in Angular segue un ciclo di vita ben definito, composto
+      da varie fasi, dalla creazione alla distruzione.
+    </p>
+    <div class="fw-bold">Fasi principali:</div>
+    <ol class="pt-3">
+      <li class="fw-bold">Creazione:</li>
+      <ul class="pt-3">
+        <li>
+          <span class="fw-bold angular-color">ngOnChanges()</span> (opzionale):
+          Si attiva quando le proprietà di input cambiano.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngOnInit()</span>: Viene invocato
+          dopo che il componente riceve gli input iniziali e il contenuto è
+          disponibile. Ideale per recuperare dati, impostare sottoscrizioni o
+          eseguire calcoli.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngDoCheck()</span> (opzionale):
+          Viene eseguito dopo ogni ciclo di rilevamento delle modifiche,
+          consentendo una logica di rilevamento delle modifiche personalizzata.
+        </li>
+      </ul>
+      <li class="fw-bold pt-3">Rilevamento delle modifiche:</li>
+      <ul class="pt-3">
+        <li>
+          Questa fase prevede il rilevamento delle modifiche alle proprietà
+          legate ai dati e l'aggiornamento della vista, se necessario.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngAfterContentChecked()</span>
+          (opzionale): Richiamato dopo la verifica del contenuto, utile per
+          attività come la manipolazione del DOM in base alle modifiche del
+          contenuto.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngAfterViewInit()</span>
+          (opzionale): Richiamato dopo l'inizializzazione della vista del
+          componente (compresi i child), adatto per azioni legate al DOM.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngAfterViewChecked()</span>
+          (opzionale): Viene eseguito dopo che la vista e il contenuto sono
+          stati controllati, adatto per attività che si basano sia sulla vista
+          che sul contenuto.
+        </li>
+      </ul>
+      <li class="fw-bold pt-3">Modifiche:</li>
+      <ul class="pt-3">
+        <li>
+          <span class="fw-bold angular-color">ngOnChanges()</span> (opzionale):
+          Si attiva nuovamente quando le proprietà dell'input cambiano dopo
+          l'impostazione iniziale.
+        </li>
+        <li>
+          <span class="fw-bold angular-color">ngDoCheck()</span> (opzionale):
+          Viene eseguito dopo ogni ciclo di rilevamento delle modifiche,
+          consentendo logiche o ottimizzazioni personalizzate.
+        </li>
+      </ul>
+      <li class="fw-bold pt-3">Distruzione:</li>
+      <ul class="pt-3">
+        <li>
+          <span class="fw-bold angular-color">ngOnDestroy()</span>: Richiamato
+          prima della distruzione del componente, essenziale per la pulizia di
+          risorse come sottoscrizioni, timer o connessioni di dati esterni.
+        </li>
+      </ul>
+    </ol>
+  </div>
+</div>

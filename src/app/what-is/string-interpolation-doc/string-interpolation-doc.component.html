@@ -1,0 +1,114 @@
+<div class="text-white pb-3 pt-2 container">
+  <div class="fw-bold">
+    <span class="angular-color">
+      {{ currentLanguage.getLanguage() == "en" ? "What is:" : "Che cos'è:" }}
+      <br
+    /></span>
+    String Interpolation
+  </div>
+  <div *ngIf="currentLanguage.getLanguage() == 'en'">
+    <p class="pt-3">
+      String Interpolation is a one-way data binding technique that allows you
+      to seamlessly
+      <span class="angular-color fw-bold"
+        >integrate data from your TypeScript code into your HTML
+        templates.</span
+      >
+      It serves as a powerful tool for creating dynamic and responsive user
+      interfaces.
+    </p>
+    <div>Here's how it works:</div>
+    <ol class="pt-3">
+      <li>
+        <span class="fw-bold angular-color">Syntax:</span> You use double curly
+        braces <span class="fw-bold angular-color">{{"{{ }}" }}</span> to embed
+        expressions within your HTML strings. Inside these braces, you write the
+        name of a property or variable from your component's TypeScript code.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Data Binding: </span> When Angular
+        renders your template, it evaluates the expression within the curly
+        braces and replaces it with the current value of the corresponding
+        property or variable. This creates a dynamic link between your data and
+        the displayed content.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">One-way Binding: </span> Remember,
+        String Interpolation is one-way. Changes made in the HTML template won't
+        modify the underlying data in your TypeScript code. It's primarily for
+        displaying data, not modifying it.
+      </li>
+    </ol>
+    <div class="fw-bold pb-3">Benefits of using String Interpolation:</div>
+    <ul>
+      <li>
+        <span class="fw-bold angular-color">Easy to use: </span> The syntax is
+        simple and intuitive, making it accessible even for beginners.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Dynamic updates: </span> Changes in
+        your data automatically reflect in the template, keeping your UI
+        up-to-date.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Improved readability: </span>
+        Your templates become more expressive and easier to understand by
+        clearly separating data and presentation.
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="currentLanguage.getLanguage() == 'it'">
+    <p class="pt-3">
+      L'interpolazione delle stringhe è una tecnica di data binding
+      unidirezionale che consente di
+      <span class="fw-bold angular-color">
+        integrare senza problemi i dati del codice TypeScript nei modelli
+        HTML.</span
+      >
+      È uno strumento potente per creare interfacce utente dinamiche e reattive.
+    </p>
+    <div>Ecco come funziona:</div>
+    <ol class="pt-3">
+      <li>
+        <span class="fw-bold angular-color">Sintassi:</span> Si usano le doppie
+        parentesi graffe
+        <span class="fw-bold angular-color">{{"{{ }}" }}</span> per incorporare
+        le espressioni nelle stringhe HTML. All'interno di queste parentesi
+        graffe, si scrive il nome di una proprietà o di una variabile del codice
+        TypeScript del componente.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Legame con i dati: </span> Quando
+        Angular esegue il rendering del modello, valuta l'espressione
+        all'interno delle parentesi graffe e la sostituisce con il valore
+        corrente della proprietà o della variabile corrispondente. In questo
+        modo si crea un collegamento dinamico tra i dati e il contenuto
+        visualizzato.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Legame unidirezionale: </span>
+        Ricordate che l'interpolazione delle stringhe è unidirezionale. Le
+        modifiche apportate al modello HTML non modificheranno i dati
+        sottostanti nel codice TypeScript. Serve principalmente a visualizzare i
+        dati, non a modificarli.
+      </li>
+    </ol>
+    <div class="fw-bold pb-3">Vantaggi dell'uso di String Interpolation:</div>
+    <ul>
+      <li>
+        <span class="fw-bold angular-color">Facile da usare: </span> La sintassi
+        è semplice e intuitiva, per cui è accessibile anche ai principianti.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Aggiornamenti dinamici: </span>
+        Le modifiche dei dati si riflettono automaticamente nel modello,
+        mantenendo l'interfaccia utente aggiornata.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Migliore leggibilità: </span>
+        I modelli diventano più espressivi e più facili da capire, grazie alla
+        chiara separazione tra dati e presentazione.
+      </li>
+    </ul>
+  </div>
+</div>

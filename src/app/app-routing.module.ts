@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './home/main/main.component';
 import { ChildToParentComponent } from './what-is/child-to-parent/child-to-parent.component';
-import { ComponentLifecycleComponent } from './what-is/component-lifecycle/component-lifecycle.component';
+import { ComponentLifecycleDocComponent } from './what-is/component-lifecycle-doc/component-lifecycle-doc.component';
 import { DirectiveComponent } from './what-is/directive/directive.component';
 import { EventBindingComponent } from './what-is/event-binding/event-binding.component';
 import { NgforComponent } from './what-is/ngfor/ngfor.component';
 import { NgifComponent } from './what-is/ngif/ngif.component';
 import { ParentToChildComponent } from './what-is/parent-to-child/parent-to-child.component';
-import { PropertyBindingComponent } from './what-is/property-binding/property-binding.component';
+import { PropertyBindingDocComponent } from './what-is/property-binding-doc/property-binding-doc.component';
 import { ServiceComponent } from './what-is/service/service.component';
-import { StringInterpolationComponent } from './what-is/string-interpolation/string-interpolation.component';
+import { StringInterpolationDocComponent } from './what-is/string-interpolation-doc/string-interpolation-doc.component';
 import { TwoWayBindingComponent } from './what-is/two-way-binding/two-way-binding.component';
 import { VariableTemplateComponent } from './what-is/variable-template/variable-template.component';
 
@@ -20,16 +20,16 @@ const routes: Routes = [
     component: MainComponent,
   },
   {
-    path: 'what-is-component-lifecycle',
-    component: ComponentLifecycleComponent,
+    path: 'what-is-component-lifecycle-doc',
+    component: ComponentLifecycleDocComponent,
   },
   {
     path: 'what-is-string-interpolation',
-    component: StringInterpolationComponent,
+    component: StringInterpolationDocComponent,
   },
   {
     path: 'what-is-property-binding',
-    component: PropertyBindingComponent,
+    component: PropertyBindingDocComponent,
   },
   {
     path: 'what-is-event-binding',
