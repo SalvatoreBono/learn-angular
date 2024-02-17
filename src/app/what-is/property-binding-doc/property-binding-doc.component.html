@@ -8,52 +8,89 @@
   </div>
   <div *ngIf="currentLanguage.getLanguage() == 'en'">
     <p class="pt-3">
-      String Interpolation is a one-way data binding technique that allows you
-      to seamlessly
-      <span class="angular-color fw-bold"
-        >integrate data from your TypeScript code into your HTML
-        templates.</span
-      >
-      It serves as a powerful tool for creating dynamic and responsive user
-      interfaces.
+      Property binding is a mechanism that allows you to dynamically associate
+      data from your TypeScript component's logic (properties, methods,
+      expressions) with properties of HTML elements or directives within your
+      template. This creates a two-way flow of information, ensuring consistency
+      and responsiveness between your application's data and its presentation.
     </p>
-    <div>Here's how it works:</div>
-    <ol class="pt-3">
+    <div class="fw-bold">Key Aspects of Property Binding:</div>
+    <ul class="pt-3">
       <li>
-        <span class="fw-bold angular-color">Syntax:</span> You use double curly
-        braces <span class="fw-bold angular-color">{{"{{ }}" }}</span> to embed
-        expressions within your HTML strings. Inside these braces, you write the
-        name of a property or variable from your component's TypeScript code.
+        <span class="fw-bold angular-color">Syntax:</span> Property binding uses
+        square brackets <code>[ ]</code> around the property name in your
+        template:
+        <code> img [src]="imageSource" </code>
       </li>
       <li>
-        <span class="fw-bold angular-color">Data Binding: </span> When Angular
-        renders your template, it evaluates the expression within the curly
-        braces and replaces it with the current value of the corresponding
-        property or variable. This creates a dynamic link between your data and
-        the displayed content.
+        <span class="fw-bold angular-color">Data Flow: </span> Property binding
+        is primarily one-directional, meaning data flows from your component's
+        logic to the template. However, you can achieve two-way binding using
+        <code> [(ngModel)] </code>for form input.
       </li>
       <li>
-        <span class="fw-bold angular-color">One-way Binding: </span> Remember,
-        String Interpolation is one-way. Changes made in the HTML template won't
-        modify the underlying data in your TypeScript code. It's primarily for
-        displaying data, not modifying it.
-      </li>
-    </ol>
-    <div class="fw-bold pb-3">Benefits of using String Interpolation:</div>
-    <ul>
-      <li>
-        <span class="fw-bold angular-color">Easy to use: </span> The syntax is
-        simple and intuitive, making it accessible even for beginners.
+        <span class="fw-bold angular-color">Target Elements: </span> You can
+        bind properties to various HTML elements, directives, and components.
       </li>
       <li>
-        <span class="fw-bold angular-color">Dynamic updates: </span> Changes in
-        your data automatically reflect in the template, keeping your UI
-        up-to-date.
+        <span class="fw-bold angular-color">Property Evaluation: </span
+        >Expressions within property bindings are evaluated whenever changes
+        occur in their dependencies, triggering an update in the element's
+        property.
       </li>
       <li>
-        <span class="fw-bold angular-color">Improved readability: </span>
-        Your templates become more expressive and easier to understand by
-        clearly separating data and presentation.
+        <span class="fw-bold angular-color">Common Use Cases: </span>
+        <ul>
+          <li>Setting text content (<code>[textContent]="message"</code>)</li>
+          <li>Setting text content (<code>[src]="imageUrl"</code>)</li>
+          <li>Setting text content (<code>[disabled]="isLocked"</code>)</li>
+          <li>
+            Setting text content (<code
+              >[ngStyle]="{{
+                '{"color": "isHighlighted" ? "red" : "black"}'
+              }}"</code
+            >)
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="fw-bold">Benefits of Property Binding:</div>
+    <ul class="pt-3">
+      <li>
+        <span class="fw-bold angular-color">Declarative Style: </span>You
+        describe what you want to display, not how to achieve it, promoting
+        maintainability and separation of concerns.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Dynamic Updates: </span>Properties
+        can be updated automatically based on component logic, improving
+        responsiveness and interactivity.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Data Sharing: </span> Property
+        bindings facilitate communication between components by exposing
+        properties from one component to another's template.
+      </li>
+      <li>
+        <span class="fw-bold angular-color">Flexibility: </span>You can use
+        expressions, functions, and object properties within bindings, providing
+        control over how data is displayed.
+      </li>
+    </ul>
+    <div class="fw-bold">Best Practices:</div>
+    <ul class="pt-3">
+      <li>Keep property bindings simple and readable for clarity.</li>
+      <li>
+        Use <code>*ngIf </code>or <code>*ngSwitch</code> for complex conditional
+        logic instead of binding directly to CSS classes.
+      </li>
+      <li>
+        Consider <code>@Input</code> and <code>@Output</code> decorators for
+        controlled communication between components.
+      </li>
+      <li>
+        For larger data sets, employ techniques like virtual scrolling or
+        asynchronous data loading to maintain performance.
       </li>
     </ul>
   </div>
